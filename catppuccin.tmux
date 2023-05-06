@@ -151,9 +151,9 @@ main() {
   catppuccin_right_status="$(get_tmux_option "@catppuccin_right_status" "")"
   readonly catppuccin_right_status
 
-  set status-left ""
+  set status-left "#{tmux_mode_indicator}  #{online_status}  #[fg=$color_gray]%R#{pomodoro_status}"
 
-  set status-right "#{pomodoro_status}${catppuccin_right_status}${right_column1},${right_column2}"
+  set status-right "${catppuccin_right_status}${right_column1},${right_column2}"
 
   setw window-status-format "${window_status_format}"
   setw window-status-current-format "${window_status_current_format}"
