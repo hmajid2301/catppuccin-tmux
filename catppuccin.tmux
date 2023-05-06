@@ -42,8 +42,8 @@ main() {
   set status "on"
   set status-bg "${thm_bg}"
   set status-justify "left"
-  set status-left-length "100"
-  set status-right-length "100"
+  set status-left-length "200"
+  set status-right-length "200"
 
   # messages
   set message-style "fg=${thm_cyan},bg=${thm_gray},align=centre"
@@ -153,7 +153,7 @@ main() {
 
   set status-left ""
 
-  set status-right "${catppuccin_right_status},${right_column1},${right_column2}"
+  set status-right "${catppuccin_right_status}${right_column1},${right_column2}"
 
   setw window-status-format "${window_status_format}"
   setw window-status-current-format "${window_status_current_format}"
